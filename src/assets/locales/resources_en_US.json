@@ -1,4 +1,8 @@
 {
+  "app_nav_user_management": {
+    "message": "User management",
+    "_description": "User this page to manage users"
+  },
   "example_string": {
     "message": "This is an example string",
     "_description": "The _description property gives context to the translator as to how the string is used in the product"

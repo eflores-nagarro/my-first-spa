@@ -35,10 +35,16 @@
               Enter a valid email in the "joe@abc.com" format.
             </div>        
         </ng-container>
-        <label for="date-of-birth" class="sky-control-label sky-control-label-required">
+        <label for="date-of-birth" class="sky-control-label sky-control-label-required" [for]="dateInput.id">
             Date of birth
         </label>
-        <input class="sky-form-control" id="date-of-birth" type="text" aria-required="true" required>
+        <!-- <input class="sky-form-control" id="date-of-birth" type="text" aria-required="true" required> -->
+        <sky-input-box>
+            <sky-datepicker>
+              <input
+                formControlName="birthDate" id="birthDate" skyDatepickerInput skyId type="text" #dateInput="skyId"/>
+            </sky-datepicker>
+          </sky-input-box>
         <label for="address" class="sky-control-label">
             Address
         </label>

@@ -29,7 +29,8 @@ export class AddUserComponent implements OnInit{
     'contactPhone': this.contactPhone,
     'email': new FormControl(undefined, 
       [Validators.required, 
-        SkyValidators.email])
+        SkyValidators.email]),
+    'birthDate': new FormControl(new Date(2021, 12, 1))
   });
   }
 }

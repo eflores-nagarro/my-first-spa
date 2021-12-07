@@ -28,6 +28,10 @@ import {
 } from '@skyux/phone-field';
 
 import {
+  SkyDatepickerModule
+} from '@skyux/datetime';
+
+import {
   SkyIdModule
 } from '@skyux/core';
 
@@ -52,6 +56,7 @@ import {
     SkyNavbarModule,
     SkyInputBoxModule,
     SkyPhoneFieldModule,
+    SkyDatepickerModule,
     SkyIdModule,
     SkyEmailValidationModule,
     SkyStatusIndicatorModule

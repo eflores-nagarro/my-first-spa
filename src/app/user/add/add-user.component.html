@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <h1>Add user</h1>
-<form action="" method="post" class="add-user-form">
+<form [formGroup]="addUserForm" class="add-user-form">
     <div class="sky-form-group" style="max-width: 50%">
         <label for="first-name" class="sky-control-label sky-control-label-required">
             First name
@@ -13,11 +13,20 @@
         <label for="contact-number" class="sky-control-label sky-control-label-required">
             Contact number
         </label>
-        <input class="sky-form-control" id="contact-number" type="text" aria-required="true" required>
+        <!-- <input class="sky-form-control" id="contact-number" type="text" aria-required="true" required> -->
+        <sky-input-box>
+            <sky-phone-field >
+                <input formControlName="contactPhone" skyPhoneFieldInput class="sky-form-control" id="contact-number">
+            </sky-phone-field>
+        </sky-input-box>    
+        <sky-status-indicator *ngIf="!contactPhone.valid" descriptionType="none" indicatorType="danger">
+            Enter a phone number matching the format for the selected country.
+        </sky-status-indicator>
         <label for="email" class="sky-control-label">
             Email
         </label>
         <input class="sky-form-control" id="email" type="text">
+        <!-- <input class="sky-form-control" formControlName="email" skyId #emailInput="skyId"/> -->
         <label for="date-of-birth" class="sky-control-label sky-control-label-required">
             Date of birth
         </label>

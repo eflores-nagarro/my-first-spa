@@ -19,13 +19,33 @@ import {
   SkyNavbarModule
 } from '@skyux/navbar';
 
+import {
+  SkyInputBoxModule
+} from '@skyux/forms';
+
+import {
+  SkyPhoneFieldModule
+} from '@skyux/phone-field';
+
+import {
+  SkyStatusIndicatorModule
+} from '@skyux/indicators';
+
+import {
+  HomeComponent
+}from './home.component'
+
 @NgModule({
   exports: [
     SkyAvatarModule,
     SkyAlertModule,
     SkyKeyInfoModule,
     SkyFluidGridModule,
-    SkyNavbarModule
-  ]
+    SkyNavbarModule,
+    SkyInputBoxModule,
+    SkyPhoneFieldModule,
+    SkyStatusIndicatorModule
+  ],
+  bootstrap:[HomeComponent]
 })
 export class AppSkyModule { }

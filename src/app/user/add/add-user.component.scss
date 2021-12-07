@@ -1,0 +1,7 @@
+.add-user-form {
+    width: 100%;
+  
+    &.ng-valid ::ng-deep .sky-phone-field {
+      margin-bottom: 10;
+    }
+  }

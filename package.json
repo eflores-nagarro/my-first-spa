@@ -49,7 +49,7 @@
     "@skyux/phone-field": "^4.6.2",
     "@skyux/popovers": "^4.0.0",
     "@skyux/router": "4.3.0",
-    "@skyux/theme": "4.22.1",
+    "@skyux/theme": "^4.22.1",
     "@skyux/validation": "^4.0.1",
     "rxjs": "6.6.7",
     "zone.js": "0.10.3"

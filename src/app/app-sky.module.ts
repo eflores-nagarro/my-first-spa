@@ -40,7 +40,8 @@ import {
 } from '@skyux/validation';
 
 import {
-  SkyStatusIndicatorModule
+  SkyStatusIndicatorModule,
+  SkyIconModule
 } from '@skyux/indicators';
 
 import {
@@ -59,7 +60,8 @@ import {
     SkyDatepickerModule,
     SkyIdModule,
     SkyEmailValidationModule,
-    SkyStatusIndicatorModule
+    SkyStatusIndicatorModule,
+    SkyIconModule
   ],
   bootstrap:[HomeComponent]
 })

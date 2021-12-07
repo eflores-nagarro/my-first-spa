@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <h1>Add user</h1>
-<form [formGroup]="addUserForm" class="add-user-form">
+<form [formGroup]="addUserFormGroup" class="add-user-form">
     <div class="sky-form-group" style="max-width: 50%">
         <label for="first-name" class="sky-control-label sky-control-label-required">
             First name
@@ -25,8 +25,16 @@
         <label for="email" class="sky-control-label">
             Email
         </label>
-        <input class="sky-form-control" id="email" type="text">
-        <!-- <input class="sky-form-control" formControlName="email" skyId #emailInput="skyId"/> -->
+        <!-- <input class="sky-form-control" id="email" type="text"> -->
+        <input class="sky-form-control" formControlName="email" skyId #emailInput="skyId"/>
+        <ng-container *ngIf="emailControl.errors && emailControl.touched">
+            <div *ngIf="emailControl.errors.required" class="sky-error-label">
+              Email address is required.
+            </div>        
+            <div *ngIf="emailControl.errors.skyEmail && emailControl.dirty" class="sky-error-label">
+              Enter a valid email in the "joe@abc.com" format.
+            </div>        
+        </ng-container>
         <label for="date-of-birth" class="sky-control-label sky-control-label-required">
             Date of birth
         </label>

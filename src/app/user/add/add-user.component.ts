@@ -3,6 +3,7 @@ import {
 } from '@angular/core';
 
 import {
+  AbstractControl,
   FormControl,
   FormGroup,
   Validators
@@ -17,15 +18,18 @@ from '@skyux/validation';
   styleUrls: ['./add-user.component.scss']
 })
 export class AddUserComponent implements OnInit{
-   public contactPhone: FormControl;
-   public addUserForm: FormGroup;
-   public ngOnInit(): void {
-    this.contactPhone = new FormControl();
-    this.addUserForm = new FormGroup({
-      'contactPhone': this.contactPhone,
-      'email': new FormControl(undefined, 
-        [Validators.required, 
-          SkyValidators.email])
-    });
+  public get emailControl(): AbstractControl {
+    return this.addUserFormGroup.get('email');
+  }
+  public contactPhone: FormControl;
+  public addUserFormGroup: FormGroup;
+  public ngOnInit(): void {
+  this.contactPhone = new FormControl();
+  this.addUserFormGroup = new FormGroup({
+    'contactPhone': this.contactPhone,
+    'email': new FormControl(undefined, 
+      [Validators.required, 
+        SkyValidators.email])
+  });
   }
 }

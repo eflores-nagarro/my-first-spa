@@ -10,18 +10,6 @@ import {
     FormsModule,
     ReactiveFormsModule
   } from '@angular/forms';
-
-  import {
-    SkyInputBoxModule
-  } from '@skyux/forms';
-  
-  import {
-    SkyIdModule
-  } from '@skyux/core';
-  
-  import {
-    SkyEmailValidationModule
-  } from '@skyux/validation';
   
   import { AppSkyModule } 
   from '../../app-sky.module';
@@ -38,10 +26,7 @@ import {
       CommonModule,
       AppSkyModule,
       FormsModule,
-      SkyInputBoxModule,
-      ReactiveFormsModule,
-      SkyEmailValidationModule,
-      SkyIdModule
+      ReactiveFormsModule
     ]
     ,
     exports: [

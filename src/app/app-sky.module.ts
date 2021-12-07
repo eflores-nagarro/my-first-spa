@@ -28,6 +28,14 @@ import {
 } from '@skyux/phone-field';
 
 import {
+  SkyIdModule
+} from '@skyux/core';
+
+import {
+  SkyEmailValidationModule
+} from '@skyux/validation';
+
+import {
   SkyStatusIndicatorModule
 } from '@skyux/indicators';
 
@@ -44,6 +52,8 @@ import {
     SkyNavbarModule,
     SkyInputBoxModule,
     SkyPhoneFieldModule,
+    SkyIdModule,
+    SkyEmailValidationModule,
     SkyStatusIndicatorModule
   ],
   bootstrap:[HomeComponent]

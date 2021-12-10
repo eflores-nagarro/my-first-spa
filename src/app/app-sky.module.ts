@@ -12,6 +12,14 @@ import {
 } from '@skyux/indicators';
 
 import {
+  SkyLookupModule
+} from '@skyux/lookup';
+
+import {
+  SkyAgGridModule
+}from '@skyux/ag-grid'
+
+import {
   SkyFluidGridModule
 } from '@skyux/layout';
 
@@ -53,6 +61,8 @@ import {
     SkyAvatarModule,
     SkyAlertModule,
     SkyKeyInfoModule,
+    SkyLookupModule,
+    SkyAgGridModule,
     SkyFluidGridModule,
     SkyNavbarModule,
     SkyInputBoxModule,
@@ -64,5 +74,6 @@ import {
     SkyIconModule
   ],
   bootstrap:[HomeComponent]
+  
 })
 export class AppSkyModule { }

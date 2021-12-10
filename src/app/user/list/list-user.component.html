@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+<main>
+    <sky-fluid-grid>
+        <sky-row>
+        <sky-column>
+            <h1>User list</h1>  
+            <ag-grid-angular 
+                style="width: 500px; height: 200px;" 
+                class="ag-theme-alpine"
+                [rowData]="rowData" 
+                [columnDefs]="columnDefs">
+            </ag-grid-angular>
+        </sky-column>
+        </sky-row>
+    </sky-fluid-grid>
+</main>

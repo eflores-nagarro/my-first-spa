@@ -19,7 +19,7 @@ export class AppNavComponent {
     },
     {
       titleKey: 'User management',
-      path: '/user/add'
+      path: '/user/list'
     }
   ];
 }
